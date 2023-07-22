@@ -1,0 +1,14 @@
+{
+  "name": "ocean-webgl-training",
+  "version": "1.0.0",
+  "description": "A website i created to train on webgl",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "paul-daniel",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.154.0"
+  }
+}
