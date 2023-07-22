@@ -4,9 +4,9 @@ As the name suggest this is a repository created to play around with WEBGL. At t
 
 ## Run the project
 
-1- Clone the project.
-2- Run `npm i` to install all the necessary packages.
-3- Run `npx parcel index.html` to run the project.
+1. Clone the project.
+2. Run `npm i` to install all the necessary packages.
+3. Run `npx parcel index.html` to run the project.
 
 ## Screenshots
 
