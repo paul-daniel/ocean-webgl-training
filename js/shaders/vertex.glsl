@@ -1,6 +1,7 @@
+// vertex shaders : responsible for shape
+
 //	Classic Perlin 3D Noise 
 //	by Stefan Gustavson
-//
 vec4 permute(vec4 x) {
     return mod(((x * 34.0) + 1.0) * x, 289.0);
 }
@@ -81,16 +82,18 @@ float cnoise(vec3 P) {
 
 uniform float time;
 varying float vNoise;
+varying vec2 vUv;
 
 void main() {
     vec3 newposition = position;
     float PI = 3.1415925;
 
-    float noise = cnoise(vec3(newposition.x * 5., newposition.y * 4. + time / 5., 0.));
+    float noise = cnoise(vec3(position.x * 4., position.y * 4. + (time / 5.), 0.));
     // newposition.z += 0.1 * sin((newposition.x + 0.25 + time / 10.) * 2. * PI);
-    newposition.z += 0.1 * noise;
+    // newposition.z += 0.1 * noise;
 
     vNoise = noise;
+    vUv = uv;
 
     gl_Position = projectionMatrix * modelViewMatrix * vec4(newposition, 1.0);
 }
